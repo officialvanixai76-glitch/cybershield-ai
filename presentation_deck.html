@@ -1,0 +1,729 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EcoTrack AI — Hack Devengers 2.0 Pitch Presentation (PPT)</title>
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- FontAwesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <style>
+    :root {
+      --bg: #070c0e;
+      --card-bg: rgba(14, 23, 28, 0.85);
+      --border: rgba(16, 185, 129, 0.25);
+      --emerald: #10b981;
+      --emerald-light: #34d399;
+      --cyan: #06b6d4;
+      --amber: #f59e0b;
+      --gold: #fbbf24;
+      --font: 'Outfit', sans-serif;
+      --font-mono: 'JetBrains Mono', monospace;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      background: var(--bg);
+      color: #f1f5f9;
+      font-family: var(--font);
+      height: 100vh;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      background-image: 
+        radial-gradient(circle at 10% 20%, rgba(16, 185, 129, 0.08) 0%, transparent 40%),
+        radial-gradient(circle at 90% 80%, rgba(6, 182, 212, 0.06) 0%, transparent 45%);
+    }
+
+    /* Top Bar */
+    .top-bar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 14px 28px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      background: rgba(10, 16, 20, 0.9);
+    }
+
+    .brand-group {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .brand-title {
+      font-size: 1.15rem;
+      font-weight: 800;
+      color: #fff;
+    }
+
+    .accent-text {
+      color: var(--emerald-light);
+    }
+
+    .badge-trophy {
+      background: rgba(245, 158, 11, 0.15);
+      border: 1px solid rgba(245, 158, 11, 0.4);
+      color: #fef08a;
+      font-size: 0.74rem;
+      font-weight: 700;
+      padding: 3px 10px;
+      border-radius: 9999px;
+    }
+
+    .top-controls {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .slide-indicator {
+      font-family: var(--font-mono);
+      font-size: 0.82rem;
+      color: var(--emerald-light);
+      background: rgba(16, 185, 129, 0.1);
+      padding: 4px 12px;
+      border-radius: 9999px;
+    }
+
+    .btn-action {
+      background: rgba(255, 255, 255, 0.06);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      color: #fff;
+      padding: 6px 14px;
+      border-radius: 6px;
+      font-size: 0.82rem;
+      font-weight: 600;
+      cursor: pointer;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      transition: all 0.2s;
+    }
+
+    .btn-action:hover {
+      background: rgba(16, 185, 129, 0.2);
+      border-color: var(--emerald);
+    }
+
+    /* Presentation Canvas (16:9 Aspect Ratio) */
+    .deck-container {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+      overflow: hidden;
+    }
+
+    .slide-stage {
+      width: 100%;
+      max-width: 1240px;
+      aspect-ratio: 16 / 9;
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      box-shadow: 0 25px 60px rgba(0, 0, 0, 0.9), 0 0 35px rgba(16, 185, 129, 0.15);
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 56px 68px;
+    }
+
+    .slide-page {
+      display: none;
+      width: 100%;
+      height: 100%;
+      animation: fadeIn 0.25s ease-out;
+    }
+
+    .slide-page.active {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(6px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Typography inside slides */
+    .kicker {
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      color: var(--emerald-light);
+      text-transform: uppercase;
+      margin-bottom: 8px;
+      display: block;
+    }
+
+    h1.hero-title {
+      font-size: 4rem;
+      font-weight: 800;
+      line-height: 1.05;
+      letter-spacing: -0.04em;
+      margin-bottom: 12px;
+    }
+
+    h2.slide-title {
+      font-size: 2.3rem;
+      font-weight: 700;
+      letter-spacing: -0.03em;
+      margin-bottom: 20px;
+      line-height: 1.2;
+    }
+
+    p.lead-text {
+      font-size: 1.15rem;
+      color: #cbd5e1;
+      max-width: 820px;
+      line-height: 1.6;
+    }
+
+    /* Grid Layouts */
+    .grid-3 {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      margin-top: 10px;
+    }
+
+    .grid-4 {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+      margin-top: 10px;
+    }
+
+    .grid-2 {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 24px;
+      margin-top: 10px;
+    }
+
+    .card {
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 12px;
+      padding: 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .card-icon {
+      width: 44px;
+      height: 44px;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.3rem;
+    }
+
+    .card-icon.red { background: rgba(239, 68, 68, 0.15); color: #f87171; }
+    .card-icon.amber { background: rgba(245, 158, 11, 0.15); color: #fbbf24; }
+    .card-icon.purple { background: rgba(139, 92, 246, 0.15); color: #c084fc; }
+    .card-icon.emerald { background: rgba(16, 185, 129, 0.15); color: var(--emerald-light); }
+    .card-icon.blue { background: rgba(6, 182, 212, 0.15); color: var(--cyan); }
+
+    .card h3 { font-size: 1.15rem; color: #fff; }
+    .card p { font-size: 0.92rem; color: #94a3b8; line-height: 1.5; }
+
+    /* Comparison Table */
+    table.slide-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.9rem;
+      margin-top: 8px;
+    }
+
+    table.slide-table th {
+      background: rgba(255, 255, 255, 0.04);
+      padding: 12px 16px;
+      text-align: left;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      color: #94a3b8;
+    }
+
+    table.slide-table td {
+      padding: 12px 16px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+      color: #cbd5e1;
+    }
+
+    table.slide-table .highlight {
+      background: rgba(16, 185, 129, 0.12);
+      color: #6ee7b7;
+      border-left: 1px solid var(--border);
+      border-right: 1px solid var(--border);
+      font-weight: 600;
+    }
+
+    /* Architecture visual */
+    .arch-flow {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      background: #081014;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 24px;
+      margin-top: 10px;
+    }
+
+    .arch-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 14px;
+    }
+
+    .arch-tag {
+      font-size: 0.8rem;
+      font-weight: 700;
+      color: var(--emerald-light);
+      width: 180px;
+      text-transform: uppercase;
+    }
+
+    .arch-items {
+      display: flex;
+      gap: 10px;
+      flex: 1;
+    }
+
+    .arch-pill {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      padding: 8px 14px;
+      border-radius: 6px;
+      font-size: 0.85rem;
+      flex: 1;
+      text-align: center;
+    }
+
+    .arch-pill.glow {
+      background: rgba(16, 185, 129, 0.18);
+      border-color: var(--emerald-light);
+      color: #a7f3d0;
+      font-weight: 600;
+    }
+
+    /* Bottom Control Bar */
+    .bottom-bar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 14px 28px;
+      background: rgba(10, 16, 20, 0.95);
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .btn-nav {
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      color: #fff;
+      padding: 8px 20px;
+      border-radius: 6px;
+      font-size: 0.88rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+
+    .btn-nav:hover:not(:disabled) {
+      background: var(--emerald);
+      border-color: var(--emerald);
+    }
+
+    .btn-nav:disabled {
+      opacity: 0.3;
+      cursor: not-allowed;
+    }
+
+    .slide-dots {
+      display: flex;
+      gap: 8px;
+    }
+
+    .dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.2);
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+
+    .dot.active {
+      background: var(--emerald);
+      box-shadow: 0 0 10px var(--emerald);
+      transform: scale(1.25);
+    }
+
+    /* Print Styles */
+    @media print {
+      body { height: auto; overflow: visible; background: #fff; color: #000; }
+      .top-bar, .bottom-bar { display: none !important; }
+      .deck-container { padding: 0; }
+      .slide-stage { border: none; box-shadow: none; aspect-ratio: auto; page-break-after: always; height: 100vh; background: #fff; color: #000; }
+      .slide-page { display: flex !important; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top Bar -->
+  <header class="top-bar">
+    <div class="brand-group">
+      <div class="brand-title">EcoTrack <span class="accent-text">AI</span></div>
+      <span class="badge-trophy"><i class="fa-solid fa-trophy"></i> HACK DEVENGERS 2.0 &bull; 1ST PRIZE SUBMISSION</span>
+    </div>
+    <div class="top-controls">
+      <span class="slide-indicator" id="slideIndicator">Slide 1 of 10</span>
+      <a href="index.html" class="btn-action"><i class="fa-solid fa-display"></i> Open Live App</a>
+      <button class="btn-action" id="fullscreenToggle"><i class="fa-solid fa-expand"></i> Fullscreen</button>
+      <button class="btn-action" onclick="window.print()"><i class="fa-solid fa-file-pdf"></i> Export PDF</button>
+    </div>
+  </header>
+
+  <!-- Slide Stage -->
+  <main class="deck-container">
+    <div class="slide-stage" id="slideStage">
+      
+      <!-- Slide 1: Cover -->
+      <section class="slide-page active" data-index="1">
+        <span class="kicker"><i class="fa-solid fa-sparkles"></i> HACK DEVENGERS 2.0 &bull; OPEN INNOVATION</span>
+        <h1 class="hero-title">EcoTrack <span class="accent-text">AI</span></h1>
+        <p class="lead-text">Autonomous Hyperlocal Carbon Accounting &amp; Supply Chain ESG Intelligence Platform</p>
+        <div style="margin-top: 24px; display: flex; gap: 12px;">
+          <span class="badge-trophy" style="background: rgba(16,185,129,0.15); border-color: var(--emerald); color: #a7f3d0; font-size: 0.85rem; padding: 6px 14px;">
+            <i class="fa-solid fa-microchip"></i> Multimodal AI OCR &amp; NLP
+          </span>
+          <span class="badge-trophy" style="background: rgba(6,182,212,0.15); border-color: var(--cyan); color: #67e8f9; font-size: 0.85rem; padding: 6px 14px;">
+            <i class="fa-solid fa-globe"></i> Hyperlocal GIS Risk Map
+          </span>
+          <span class="badge-trophy" style="background: rgba(245,158,11,0.15); border-color: var(--amber); color: #fef08a; font-size: 0.85rem; padding: 6px 14px;">
+            <i class="fa-solid fa-sliders"></i> Real-Time Abatement Engine
+          </span>
+        </div>
+        <p style="margin-top: 36px; font-size: 0.85rem; color: #64748b;">Targeting 1st Prize (₹50,000) &bull; Built in 24 Hours</p>
+      </section>
+
+      <!-- Slide 2: Problem -->
+      <section class="slide-page" data-index="2">
+        <span class="kicker">THE PROBLEM STATEMENT</span>
+        <h2 class="slide-title">The Trillion-Dollar Corporate Climate Dilemma</h2>
+        <div class="grid-3">
+          <div class="card">
+            <div class="card-icon red"><i class="fa-solid fa-file-excel"></i></div>
+            <h3>Manual Spreadsheet Bottleneck</h3>
+            <p>Enterprises spend 6 to 9 months manually compiling PDFs, utility bills, and fuel receipts in error-prone Excel models.</p>
+          </div>
+          <div class="card">
+            <div class="card-icon amber"><i class="fa-solid fa-triangle-exclamation"></i></div>
+            <h3>Scope 3 Supply Chain Blindspot</h3>
+            <p>Over 80% to 90% of emissions sit in upstream suppliers and transoceanic shipping routes with zero real-time visibility.</p>
+          </div>
+          <div class="card">
+            <div class="card-icon purple"><i class="fa-solid fa-gavel"></i></div>
+            <h3>Severe Regulatory Penalties</h3>
+            <p>Mandatory EU CSRD, US SEC Climate Rules, and SEBI BRSR impose multi-million dollar fines for inaccurate emissions disclosure.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Slide 3: Solution -->
+      <section class="slide-page" data-index="3">
+        <span class="kicker">THE INNOVATION</span>
+        <h2 class="slide-title">EcoTrack AI: Autonomous Decarbonization Copilot</h2>
+        <p class="lead-text">An end-to-end intelligent platform that automates emissions ingestion, maps supply chain climate risks, and calculates optimal ROI decarbonization pathways.</p>
+        <div class="grid-4" style="margin-top: 20px;">
+          <div class="card">
+            <div class="card-icon emerald"><i class="fa-solid fa-eye"></i></div>
+            <h3>Multimodal AI</h3>
+            <p>Extracts data from utility bills &amp; logistics manifests in seconds.</p>
+          </div>
+          <div class="card">
+            <div class="card-icon blue"><i class="fa-solid fa-earth-americas"></i></div>
+            <h3>GIS Risk Map</h3>
+            <p>Visualizes tier-1 suppliers, transport corridors, and emission hotspots.</p>
+          </div>
+          <div class="card">
+            <div class="card-icon amber"><i class="fa-solid fa-sliders"></i></div>
+            <h3>What-If Abatement</h3>
+            <p>Models EV fleet switch &amp; renewable PPAs with instant financial ROI.</p>
+          </div>
+          <div class="card">
+            <div class="card-icon purple"><i class="fa-solid fa-file-shield"></i></div>
+            <h3>1-Click CSRD</h3>
+            <p>Generates cryptographic, audit-ready compliance disclosure reports.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Slide 4: System Architecture -->
+      <section class="slide-page" data-index="4">
+        <span class="kicker">TECHNICAL EXECUTION</span>
+        <h2 class="slide-title">End-to-End System Architecture</h2>
+        <div class="arch-flow">
+          <div class="arch-row">
+            <span class="arch-tag"><i class="fa-solid fa-inbox"></i> Ingestion Layer</span>
+            <div class="arch-items">
+              <div class="arch-pill">Freight Manifests (PDF/OCR)</div>
+              <div class="arch-pill">Grid Utility Bills (kWh)</div>
+              <div class="arch-pill">Fleet Fuel Telemetry</div>
+              <div class="arch-pill">Cloud Server Logs</div>
+            </div>
+          </div>
+          <div class="arch-row">
+            <span class="arch-tag"><i class="fa-solid fa-brain"></i> AI Pipeline</span>
+            <div class="arch-items">
+              <div class="arch-pill glow">LayoutLM Multimodal OCR</div>
+              <div class="arch-pill glow">DEFRA / EPA Factor Mapper</div>
+              <div class="arch-pill glow">Scope 1/2/3 Auto Classifier</div>
+              <div class="arch-pill glow">Anomaly Detection</div>
+            </div>
+          </div>
+          <div class="arch-row">
+            <span class="arch-tag"><i class="fa-solid fa-chart-line"></i> Intelligence Core</span>
+            <div class="arch-items">
+              <div class="arch-pill">Executive Telemetry HUD</div>
+              <div class="arch-pill">Leaflet GIS Supplier Map</div>
+              <div class="arch-pill">Abatement Optimizer</div>
+              <div class="arch-pill">CSRD / SEC Exporter</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Slide 5: Competitive Advantage -->
+      <section class="slide-page" data-index="5">
+        <span class="kicker">COMPETITIVE DIFFERENTIATION</span>
+        <h2 class="slide-title">EcoTrack AI vs Legacy &amp; Enterprise Alternatives</h2>
+        <table class="slide-table">
+          <thead>
+            <tr>
+              <th>Feature Dimension</th>
+              <th>Legacy Spreadsheets</th>
+              <th>Enterprise SaaS (Persefoni)</th>
+              <th class="highlight">EcoTrack AI (Our Solution)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Data Ingestion</strong></td>
+              <td>100% Manual input</td>
+              <td>Batch CSV upload</td>
+              <td class="highlight">Instant Multimodal AI OCR &amp; NLP</td>
+            </tr>
+            <tr>
+              <td><strong>Scope 3 Discovery</strong></td>
+              <td>Rough estimates</td>
+              <td>Manual supplier surveys</td>
+              <td class="highlight">Automated Route &amp; Supplier Telemetry</td>
+            </tr>
+            <tr>
+              <td><strong>Abatement Simulation</strong></td>
+              <td>None (Static)</td>
+              <td>Expensive add-on consulting</td>
+              <td class="highlight">Interactive Real-Time What-If Engine</td>
+            </tr>
+            <tr>
+              <td><strong>Deployment Speed</strong></td>
+              <td>Months</td>
+              <td>6 - 12 Weeks</td>
+              <td class="highlight">Instant Browser Run (Zero Friction)</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <!-- Slide 6: Product Demo -->
+      <section class="slide-page" data-index="6">
+        <span class="kicker">LIVE FUNCTIONALITY</span>
+        <h2 class="slide-title">Core Working Modules Showcase</h2>
+        <div class="grid-3">
+          <div class="card">
+            <span style="font-family: var(--font-mono); font-size: 1.8rem; font-weight: 800; color: var(--emerald);">01</span>
+            <h3>AI Ingestion Studio</h3>
+            <p>Upload maritime manifests or power invoices. System executes simulated laser scan, assigns DEFRA factors, and commits tons to ledger.</p>
+          </div>
+          <div class="card">
+            <span style="font-family: var(--font-mono); font-size: 1.8rem; font-weight: 800; color: var(--cyan);">02</span>
+            <h3>GIS Supply Chain Map</h3>
+            <p>Interactive Leaflet map plots 12 global facilities and supplier hubs with carbon intensity color coding and instant popup recommendations.</p>
+          </div>
+          <div class="card">
+            <span style="font-family: var(--font-mono); font-size: 1.8rem; font-weight: 800; color: var(--gold);">03</span>
+            <h3>Dynamic Abatement Engine</h3>
+            <p>Adjust sliders for EV fleet, renewable PPAs, or smart HVAC to see immediate net financial savings in ₹ Crores and tons of CO₂e mitigated.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Slide 7: Quantifiable Impact -->
+      <section class="slide-page" data-index="7">
+        <span class="kicker">REAL-WORLD IMPACT</span>
+        <h2 class="slide-title">Quantifiable Results for People &amp; Planet</h2>
+        <div class="grid-4">
+          <div class="card" style="text-align: center;">
+            <div style="font-family: var(--font-mono); font-size: 3rem; font-weight: 800; color: var(--emerald);">85%</div>
+            <p>Reduction in corporate ESG audit time and consulting fees.</p>
+          </div>
+          <div class="card" style="text-align: center;">
+            <div style="font-family: var(--font-mono); font-size: 3rem; font-weight: 800; color: var(--cyan);">30%</div>
+            <p>Average carbon reduction achieved via autonomous abatement advice.</p>
+          </div>
+          <div class="card" style="text-align: center;">
+            <div style="font-family: var(--font-mono); font-size: 3rem; font-weight: 800; color: var(--gold);">100%</div>
+            <p>Traceable, audit-proof chain from bill invoice to CSRD certificate.</p>
+          </div>
+          <div class="card" style="text-align: center;">
+            <div style="font-family: var(--font-mono); font-size: 3rem; font-weight: 800; color: #c084fc;">₹1.5Cr</div>
+            <p>Average annual OPEX saved through energy and fleet optimization.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Slide 8: Market & Monetization -->
+      <section class="slide-page" data-index="8">
+        <span class="kicker">MARKET OPPORTUNITY &amp; BUSINESS MODEL</span>
+        <h2 class="slide-title">A $38.5 Billion Global Market by 2030</h2>
+        <div class="grid-2">
+          <div class="card">
+            <h3 style="color: var(--emerald);"><i class="fa-solid fa-chart-pie"></i> Explosive Regulatory Tailwinds</h3>
+            <p>50,000+ companies across Europe are now legally required to disclose Scope 1-3 under CSRD. The US SEC and India SEBI BRSR make ESG reporting non-negotiable.</p>
+            <div style="margin-top: 10px; background: rgba(6,182,212,0.1); border-left: 3px solid var(--cyan); padding: 8px 12px; border-radius: 4px; font-size: 0.85rem;">
+              <strong>Target Verticals:</strong> Logistics &amp; freight liners, semiconductor fabs, industrial manufacturing, and cloud data centers.
+            </div>
+          </div>
+          <div class="card">
+            <h3 style="color: var(--gold);"><i class="fa-solid fa-coins"></i> High-Margin SaaS Model</h3>
+            <p><strong>Tier 1 — Growth:</strong> ₹15,000/mo for Scope 1-2 automation.<br>
+            <strong>Tier 2 — Enterprise:</strong> ₹95,000/mo for full Scope 3 GIS supply chain mapping &amp; What-If simulator.<br>
+            <strong>Tier 3 — Institutional:</strong> Custom ERP integrations (SAP/Oracle) &amp; certified auditor access.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Slide 9: Scalability Roadmap -->
+      <section class="slide-page" data-index="9">
+        <span class="kicker">SCALABILITY &amp; FUTURE ROADMAP</span>
+        <h2 class="slide-title">Beyond the Hackathon: Satellite &amp; IoT Horizon</h2>
+        <div class="grid-3">
+          <div class="card" style="border-color: var(--emerald);">
+            <span style="font-size: 0.72rem; font-weight: 700; color: var(--emerald); text-transform: uppercase;">Current Milestone</span>
+            <h3>Autonomous Core v2.4</h3>
+            <p>Multimodal OCR/NLP engine, Scope 1-3 ledger, Leaflet GIS supplier map, What-If simulator, and CSRD/SEC report exporter.</p>
+          </div>
+          <div class="card">
+            <span style="font-size: 0.72rem; font-weight: 700; color: var(--cyan); text-transform: uppercase;">Phase 2 (Q4 2026)</span>
+            <h3>Satellite Plume Detection</h3>
+            <p>Integration with ESA Sentinel-5P remote sensing data to detect methane and NO₂ plumes over monitored factories.</p>
+          </div>
+          <div class="card">
+            <span style="font-size: 0.72rem; font-weight: 700; color: var(--gold); text-transform: uppercase;">Phase 3 (2027)</span>
+            <h3>Tokenized Carbon Offsets</h3>
+            <p>Integration with decentralized green registries for instant, unforgeable retirement of verified carbon credits.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Slide 10: Conclusion -->
+      <section class="slide-page" data-index="10">
+        <div style="text-align: center; display: flex; flex-direction: column; align-items: center; gap: 18px;">
+          <span class="badge-trophy"><i class="fa-solid fa-award"></i> WHY ECOTRACK AI WINS 1ST PRIZE</span>
+          <h2 style="font-size: 3rem; font-weight: 800; letter-spacing: -0.03em;">Decarbonization Powered by Autonomous Intelligence</h2>
+          <p class="lead-text" style="text-align: center;">We don't just calculate carbon—we give enterprises the autonomous tools to eliminate it while maximizing profitability.</p>
+          <div style="display: flex; gap: 16px; margin-top: 10px;">
+            <a href="index.html" class="btn-action" style="padding: 12px 24px; font-size: 1rem; background: var(--emerald); border-color: var(--emerald);">
+              <i class="fa-solid fa-rocket"></i> Launch Live Application
+            </a>
+          </div>
+          <p style="font-size: 0.85rem; color: #64748b; margin-top: 24px;">Thank you, Hack Devengers 2.0 Jury! &bull; Open Innovation Track</p>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <!-- Bottom Bar -->
+  <footer class="bottom-bar">
+    <button class="btn-nav" id="prevSlideBtn"><i class="fa-solid fa-chevron-left"></i> Previous</button>
+    <div class="slide-dots" id="slideDots"></div>
+    <button class="btn-nav" id="nextSlideBtn">Next <i class="fa-solid fa-chevron-right"></i></button>
+  </footer>
+
+  <script>
+    let current = 1;
+    const total = 10;
+    const slides = document.querySelectorAll('.slide-page');
+    const indicator = document.getElementById('slideIndicator');
+    const prevBtn = document.getElementById('prevSlideBtn');
+    const nextBtn = document.getElementById('nextSlideBtn');
+    const dotsContainer = document.getElementById('slideDots');
+    const fullscreenToggle = document.getElementById('fullscreenToggle');
+
+    // Create dots
+    for (let i = 1; i <= total; i++) {
+      const dot = document.createElement('div');
+      dot.className = `dot ${i === 1 ? 'active' : ''}`;
+      dot.addEventListener('click', () => goTo(i));
+      dotsContainer.appendChild(dot);
+    }
+
+    function goTo(n) {
+      if (n < 1) n = 1;
+      if (n > total) n = total;
+      current = n;
+
+      slides.forEach(s => s.classList.remove('active'));
+      document.querySelector(`.slide-page[data-index="${current}"]`).classList.add('active');
+
+      indicator.textContent = `Slide ${current} of ${total}`;
+      
+      const dots = document.querySelectorAll('.dot');
+      dots.forEach((d, idx) => d.classList.toggle('active', idx + 1 === current));
+
+      prevBtn.disabled = (current === 1);
+      nextBtn.disabled = (current === total);
+    }
+
+    prevBtn.addEventListener('click', () => goTo(current - 1));
+    nextBtn.addEventListener('click', () => goTo(current + 1));
+
+    window.addEventListener('keydown', (e) => {
+      if (e.key === 'ArrowRight' || e.key === ' ') {
+        e.preventDefault();
+        goTo(current + 1);
+      } else if (e.key === 'ArrowLeft') {
+        e.preventDefault();
+        goTo(current - 1);
+      }
+    });
+
+    fullscreenToggle.addEventListener('click', () => {
+      if (!document.fullscreenElement) {
+        document.documentElement.requestFullscreen().catch(err => console.log(err));
+      } else {
+        document.exitFullscreen();
+      }
+    });
+  </script>
+</body>
+</html>
