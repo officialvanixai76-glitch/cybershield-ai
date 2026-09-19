@@ -50,9 +50,8 @@ REAL-WORLD SOCIAL & BUSINESS IMPACT:
 
 ### 4. GitHub Repository Link
 ```text
-https://github.com/YOUR_GITHUB_USERNAME/cybershield-ai
+https://github.com/officialvanixai76-glitch/cybershield-ai
 ```
-*(Replace `YOUR_GITHUB_USERNAME` with your GitHub username after pushing the repository using the 3-step guide below).*
 
 ---
 
@@ -60,13 +59,13 @@ https://github.com/YOUR_GITHUB_USERNAME/cybershield-ai
 
 ### 5. Live Demo / Deployment Link
 ```text
-https://YOUR_GITHUB_USERNAME.github.io/cybershield-ai/
+https://officialvanixai76-glitch.github.io/cybershield-ai/
 ```
 *Or host on Vercel / Netlify with 1 click: `https://cybershield-ai.vercel.app`*
 
 ### 6. PPT / Presentation Deck Link
 ```text
-https://YOUR_GITHUB_USERNAME.github.io/cybershield-ai/presentation_deck.html
+https://officialvanixai76-glitch.github.io/cybershield-ai/presentation_deck.html
 ```
 *(You can also open `presentation_deck.html` in your browser, click **Export PDF**, and upload the PDF directly to the portal as an attachment).*
 
