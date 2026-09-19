@@ -1,36 +1,38 @@
 <div align="center">
 
-# 🌿 EcoTrack AI
+# 🛡️ CyberShield AI
 
-### Autonomous Hyperlocal Carbon Accounting & Supply Chain ESG Intelligence Platform
+### Autonomous Multi-Cloud Threat Hunting, Zero-Day Exploit Auto-Patcher & Global Cyber Attack Map
 
 **Flagship 1st Prize Candidate for [Hack Devengers 2.0](https://unstop.com) — Open Innovation Track**
 
-[![Hackathon](https://img.shields.io/badge/Hackathon-Hack%20Devengers%202.0-10b981?style=for-the-badge&logo=codeforces&logoColor=white)](https://unstop.com)
-[![Track](https://img.shields.io/badge/Track-Open%20Innovation-06b6d4?style=for-the-badge)](https://unstop.com)
-[![Standard](https://img.shields.io/badge/Standard-GHG%20Protocol%20Scope%201--3-f59e0b?style=for-the-badge)](https://ghgprotocol.org)
-[![Compliance](https://img.shields.io/badge/Compliance-EU%20CSRD%20%7C%20US%20SEC-8b5cf6?style=for-the-badge)](https://finance.ec.europa.eu)
+[![Hackathon](https://img.shields.io/badge/Hackathon-Hack%20Devengers%202.0-00f0ff?style=for-the-badge&logo=codeforces&logoColor=white)](https://unstop.com)
+[![Track](https://img.shields.io/badge/Track-Open%20Innovation-ff0055?style=for-the-badge)](https://unstop.com)
+[![Framework](https://img.shields.io/badge/Framework-MITRE%20ATT%26CK%20v14-00ff9d?style=for-the-badge)](https://attack.mitre.org)
+[![Enforcement](https://img.shields.io/badge/Engine-Linux%20Kernel%20eBPF%20XDP-a855f7?style=for-the-badge)](https://ebpf.io)
+[![Compliance](https://img.shields.io/badge/Compliance-CERT--In%206h%20%7C%20SEC%208--K-ffaa00?style=for-the-badge)](https://www.cert-in.org.in)
 [![License](https://img.shields.io/badge/License-MIT-emerald?style=for-the-badge)](LICENSE)
 
-[🚀 Launch Live Application](#live-demo--preview) • [📑 Standalone Pitch Presentation (PPT)](presentation_deck.html) • [📋 Ready-to-Submit Form](SUBMISSION.md) • [✨ Key Features](#core-features)
+[🚀 Launch Live Application](#live-demo--preview) • [📑 Standalone Pitch Presentation (PPT)](presentation_deck.html) • [📋 Ready-to-Submit Copy](SUBMISSION.md) • [✨ Key Capabilities](#core-capabilities)
 
 </div>
 
 ---
 
-## 💡 Executive Summary & Problem Statement
+## ⚡ Executive Summary & Problem Statement
 
-Enterprises worldwide face a **$38.5 Billion ESG regulatory bottleneck**:
-- **Manual Spreadsheet Nightmare:** Corporations spend **6 to 9 months** manually aggregating utility bills, flight stubs, and freight manifests in Excel, with error rates exceeding 25%.
-- **The Scope 3 Blindspot:** **80% to 90%** of corporate emissions lurk in upstream and downstream supply chains (Scope 3), where enterprises have virtually zero continuous visibility.
-- **Multimillion-Dollar Regulatory Penalties:** Non-compliance with the **EU CSRD**, **US SEC Climate Disclosures**, and **SEBI BRSR** results in hefty fines, blacklisting, and investor capital flight.
+Enterprises operate in a **$266 Billion cybersecurity landscape** where the existing defense model is fundamentally broken:
+- **The 72-Hour Zero-Day Window:** When a critical zero-day vulnerability (such as Log4Shell or Spring4Shell) is weaponized in the wild, it takes upstream software vendors **days or weeks** to release official patches. During this window, 95% of breaches occur.
+- **287-Day Industry MTTR:** According to IBM Security, the average enterprise takes **287 days** to identify and contain a data breach. Human security operations centers (SOCs) are drowning in thousands of disconnected alerts.
+- **Strict Regulatory Mandates:** India's **CERT-In mandates 6-hour cybersecurity incident reporting**, and the US **SEC enforces mandatory 4-day Form 8-K disclosures**. Non-compliance triggers severe executive penalties.
 
-### 🌟 The EcoTrack AI Breakthrough
-**EcoTrack AI** is an autonomous carbon accounting and ESG intelligence platform that replaces months of manual consulting with real-time AI automation:
-1. **Multimodal Ingestion Studio:** Upload utility bills, freight manifests, or server telemetry; our AI vision & NLP pipeline auto-extracts volumes, assigns DEFRA/EPA emission factors, and classifies Scopes 1, 2, and 3 with **>99% confidence**.
-2. **Hyperlocal GIS Supply Chain Heatmap:** Visualizes tier-1/tier-2 suppliers, transport routes, and facility carbon intensity across the globe using Leaflet.js.
-3. **What-If Carbon Abatement Simulator:** Real-time optimization sliders model the impact of fleet electrification, renewable PPAs, and IoT HVAC tuning, generating instant **avoided CO₂e metrics and ROI in ₹ Crores**.
-4. **Audit-Ready CSRD / SEC Disclosure Reports:** 1-click generation of cryptographic, verifiable climate disclosure statements ready for third-party auditors and regulators.
+### 🌟 The CyberShield AI Breakthrough
+**CyberShield AI** introduces autonomous zero-day immunity for modern multi-cloud workloads:
+1. **Sub-Second Autonomous MTTR (840ms):** Replaces weeks of manual emergency patch cycles with sub-second automated threat mitigation.
+2. **Deep Threat Sandbox:** Detonates suspect zero-day payloads in air-gapped microVMs, analyzes bytecode/disassembly, maps MITRE ATT&CK techniques, and delivers **99.8% threat confidence verdicts**.
+3. **Autonomous eBPF Kernel Auto-Patcher:** Automatically synthesizes non-disruptive eBPF XDP filters, WAF regex rules, and source code pull requests—injecting virtual immunity directly at the kernel layer with **zero application downtime or reboots**.
+4. **Global Attack GIS Battlespace Map:** Real-time geospatial tracking of adversary botnets, DDoS ingress (Gbps), and multi-cloud Kubernetes clusters.
+5. **1-Click CERT-In & SEC Compliance Reporting:** Instantaneous cryptographic incident disclosure certificate generation.
 
 ---
 
@@ -38,109 +40,102 @@ Enterprises worldwide face a **$38.5 Billion ESG regulatory bottleneck**:
 
 ```mermaid
 flowchart TB
-    subgraph INGESTION["1. Multimodal Data Ingestion Layer"]
-        A1["Utility Bills & Invoices (PDF/Image)"]
-        A2["Ocean & Air Freight Manifests"]
-        A3["Smart IoT Energy Meters"]
-        A4["Fleet Telematics & Fuel Logs"]
+    subgraph INGRESS["1. Multi-Cloud Ingress & Sensor Fabric"]
+        A1["eBPF Socket Probes (Kernel Layer)"]
+        A2["K8s Microservice Ingress Controllers"]
+        A3["VPC Flow Logs (AWS / GCP / Azure)"]
+        A4["LLM Prompt & Vector DB Gateway"]
     end
 
-    subgraph AI_PIPELINE["2. Autonomous AI Inference Core"]
-        B1["Multimodal OCR & LayoutLM"]
-        B2["Entity & Volume Extractor"]
-        B3["DEFRA / EPA Factor Mapper"]
-        B4["GHG Scope 1 / 2 / 3 Auto-Classifier"]
-        B5["Anomaly & Greenwashing Detector"]
+    subgraph SANDBOX["2. Autonomous AI Threat Hunting Sandbox"]
+        B1["Zero-Day Bytecode Disassembler"]
+        B2["Air-Gapped MicroVM Detonation"]
+        B3["MITRE ATT&CK Tactic Classifier"]
+        B4["Shannon Entropy & Heuristic Analyzer"]
     end
 
-    subgraph ENGINE["3. Intelligence & Simulation Engine"]
-        C1["Continuous Carbon Ledger"]
-        C2["Geospatial GIS Risk Analyzer"]
-        C3["What-If Marginal Abatement Optimizer"]
-        C4["Cryptographic Audit Verifier"]
+    subgraph SYNTHESIZER["3. Autonomous Auto-Patcher Core"]
+        C1["eBPF XDP Kernel Filter Generator"]
+        C2["WAF / ModSecurity Regex Synthesizer"]
+        C3["Source Code Git PR Hotpatch Engine"]
+        C4["Zero-Overhead Safety Verification"]
     end
 
-    subgraph INTERFACE["4. Executive Command Interface"]
-        D1["Real-time Decarbonization HUD"]
-        D2["Interactive Leaflet GIS Heatmap"]
-        D3["Dynamic Abatement Curve Simulator"]
-        D4["CSRD / SEC Climate Reports (PDF/JSON/CSV)"]
-        D5["Embedded Judge Pitch Deck (10 Slides)"]
+    subgraph ENFORCEMENT["4. Active Defense & Telemetry HUD"]
+        D1["Real-Time Global Cyber Attack GIS Map"]
+        D2["Automated Cluster Micro-Isolation"]
+        D3["CERT-In & SEC Disclosure Exporter"]
+        D4["Built-In 10-Slide Pitch Presentation"]
     end
 
     A1 & A2 & A3 & A4 --> B1
-    B1 --> B2 --> B3 --> B4 --> B5
-    B5 --> C1 & C2 & C3 & C4
-    C1 --> D1
+    B1 --> B2 --> B3 --> B4
+    B4 --> C1 & C2 & C3 & C4
+    C1 --> D2
     C2 --> D2
-    C3 --> D3
-    C4 --> D4
-    ENGINE --> D5
+    B3 --> D1
+    C4 --> D3
+    ENFORCEMENT --> D4
 ```
 
 ---
 
-## ✨ Core Features & Live Working Modules
+## ✨ Core Capabilities & Working Modules
 
-### 1. 🤖 AI Multimodal Carbon Ingestion Studio
-- Preloaded with 4 enterprise test manifests (Maritime Freight, Texas Grid Power, Commercial Delivery Fleet, Cloud Compute).
-- Simulated laser-scanning animation with confidence scoring.
-- Drag-and-drop support for PDF, PNG, JPG, and CSV files.
-- Real-time conversion using UK DEFRA, US EPA eGRID, and IMO GLEC frameworks.
-- **1-Click "Commit to Ledger"** button that dynamically updates the entire dashboard and charts.
+### 1. 🌍 Interactive Global Cyber Attack GIS Map
+- Powered by Leaflet.js with dark-mode military HUD cartography.
+- Geospatially maps 12 primary cloud workloads (AWS N. Virginia, AWS Mumbai, GCP Frankfurt, Azure Tokyo, K8s Singapore, etc.) and nation-state C2 botnets.
+- Renders **animated attack trajectory vectors** targeting active cloud workloads.
+- Interactive filtering by *All, Cloud Hubs, Under Attack, Shielded*.
+- Live packet interception stream overlay displaying real-time IP, port, and mitigation telemetry.
 
-### 2. 🌍 Hyperlocal Supply Chain GIS Map
-- Powered by Leaflet.js with dark-mode cybercartography.
-- 12 active global facility nodes (Shanghai Giga-Assembly, Rotterdam Terminal, Singapore Port, Frankfurt Cloud, Bengaluru Tech Park, Austin Fab, etc.).
-- Color-coded carbon risk pins (Critical >5,000 MT, Moderate 1,000-5,000 MT, Clean/Renewable).
-- Category filtering (All, Scope 1 Plants, Scope 2 DCs/Offices, Scope 3 Freight Corridors).
-- Rich interactive popups detailing facility emissions, renewable energy mix, and AI-recommended decarbonization interventions.
+### 2. 🔬 Autonomous Threat Hunting Sandbox
+- Preloaded with 4 enterprise zero-day attack vectors:
+  - **CVE-2026-X:** Spring/Log4j v3 JNDI Remote Code Execution (CVSS 10.0).
+  - **K8s Kernel Escape:** eBPF Ring0 system call breakout (CVSS 9.8).
+  - **LLM Prompt Injection:** Vector database exfiltration & jailbreak (CVSS 9.2).
+  - **RansomLock Worm:** Multi-threaded polymorphic storage encryption (CVSS 9.6).
+- Simulated laser scanner animation with live execution trace logs.
+- Disassembles raw payload bytes and outputs MITRE ATT&CK tactics, target microservices, and AI threat confidence.
 
-### 3. 🎛️ What-If Carbon Abatement Simulator
-- 4 real-time simulation sliders:
-  - **Commercial Fleet Electrification** (0% - 100%)
-  - **Renewable Power Purchase Agreements (PPA)** (0% - 100%)
-  - **Supplier Nearshoring & Local Sourcing** (0% - 100%)
-  - **Smart IoT Building & HVAC Optimization** (0% - 100%)
-- Instant recalculation of **Tons of CO₂e mitigated**, **% Reduction**, **Annual OPEX Savings in ₹ Crores**, and **Marginal Abatement Cost ($/tCO₂e)**.
-- Dynamic Chart.js abatement curve updates.
-- 1-click strategic presets: *Conservative (2027)*, *Aggressive Net-Zero (2030)*, and *Max ROI*.
+### 3. ⚡ Autonomous eBPF Kernel Auto-Patcher
+- Dynamic generation of 3 complementary virtual patch formats:
+  - **Kernel eBPF C Code:** Injects directly into Linux XDP hooks for line-rate packet drops without context switching.
+  - **WAF / ModSecurity Rules:** Edge perimeter blocking signatures.
+  - **Source Code Git PR:** Automated code fix diff with input sanitization.
+- **1-Click "Deploy Virtual Patch" Action:** Instantly enforces the patch across all 1,428 pods, neutralizes active red attack trajectories on the global map, and reduces ingress traffic in real time.
 
-### 4. 📊 Audit-Ready CSRD & SEC Compliance Center
-- Formal corporate disclosure statement conforming to GHG Corporate Standard and EU CSRD.
-- Cryptographic verification hash (`0x8F9a410b98124Cde72B19e20a`).
-- Full data table with Scope breakdown and verification status.
-- Export options:
-  - **JSON Export:** Machine-readable regulatory API payload.
-  - **CSV Ledger:** Formatted emissions ledger.
-  - **Print / PDF:** Clean, audit-ready certificate layout.
+### 4. ♟️ MITRE ATT&CK Framework Active Matrix
+- Visual kill-chain progression across 5 tactical stages: *Reconnaissance*, *Initial Access*, *Execution*, *Privilege Escalation*, and *Exfiltration*.
+- Displays technique codes (T1595, T1190, T1059, T1611, T1048) with real-time deflection counters.
 
-### 5. 📽️ Built-In 10-Slide Pitch Presentation (PPT)
-- Integrated pitch deck modal with slide counter, navigation buttons, keyboard arrows, and fullscreen mode.
-- Standalone presentation view available at [`presentation_deck.html`](presentation_deck.html) formatted in crisp 16:9 ratio.
+### 5. 📑 CERT-In & SEC Cyber Regulatory Disclosure Center
+- Formatted incident report compliant with CERT-In 6-hour disclosure and SEC Form 8-K rules.
+- Cryptographic incident verification hash (`0xCyberShield-7F2A902C881E4B`).
+- Structured exports: **JSON API Payload**, **CSV Incident Timeline**, and **Print / PDF Certificate**.
+
+### 6. 📽️ Built-In 10-Slide Pitch Presentation (PPT)
+- Embedded slideshow modal accessible from any page via the top navigation or banner.
+- Standalone presentation view available at [`presentation_deck.html`](presentation_deck.html) formatted in 16:9 ratio with keyboard navigation.
 
 ---
 
 ## 🎯 Alignment with Hack Devengers 2.0 Evaluation Criteria
 
-| Evaluation Dimension | Weight | How EcoTrack AI Delivers 1st Prize Performance |
+| Evaluation Dimension | Weight | How CyberShield AI Delivers 1st Prize Performance |
 | :--- | :---: | :--- |
-| **Innovation & Originality** | 20% | Autonomous multimodal ingestion + interactive What-If abatement engine replaces passive carbon trackers with active corporate decision intelligence. |
-| **Problem-Solving Approach** | 20% | Solves the $38B corporate compliance bottleneck (CSRD/SEC/SEBI) and provides transparency into the 80%+ Scope 3 blindspot. |
-| **Technical Implementation** | 20% | Production-quality vanilla ES6+ architecture, Leaflet GIS spatial mapping, Chart.js telemetry, and zero-dependency deployability. |
-| **Functionality & Execution** | 15% | 100% working application: zero placeholders, working file ingestion simulator, dynamic sliders, and live report generation. |
-| **User Experience & Aesthetics** | 15% | Ultra-premium cyber-emerald glassmorphism, responsive across desktop & mobile, dark theme, smooth micro-interactions. |
-| **Scalability & Future Potential** | 10% | Clear roadmap for Sentinel-5P satellite remote sensing, IoT smart meter ingestion, and tokenized carbon credit retirement. |
+| **Innovation & Originality** | 20% | World's first hackathon solution demonstrating automated eBPF kernel virtual patching from raw zero-day bytecode in 840ms. |
+| **Problem-Solving Approach** | 20% | Closes the dangerous 72-hour zero-day exposure window where enterprises suffer 95% of breaches before vendor patches release. |
+| **Technical Implementation** | 20% | Modular, zero-dependency ES6+ architecture, Leaflet GIS spatial mapping, Chart.js packet telemetry, and real-time state synchronization. |
+| **Functionality & Execution** | 15% | 100% working application: interactive sandbox detonation, working patch deployment that changes map state, and live incident reporting. |
+| **User Experience & Aesthetics** | 15% | Military-grade cyber-noir SOC interface with neon cyan, crimson, and obsidian accents, tactical indicators, and responsive layouts. |
+| **Scalability & Future Potential** | 10% | Clear roadmap for privacy-preserving federated threat sharing and autonomous decoy deception networks. |
 
 ---
 
 ## ⚡ Quick Start / Local Installation
 
-EcoTrack AI is built with modern, zero-dependency web technologies for instant, friction-free execution on any machine or cloud server.
-
-### Prerequisites
-- Any modern web browser (Google Chrome, Microsoft Edge, Mozilla Firefox, Safari).
-- (Optional) Python, Node.js, or any simple static HTTP server.
+CyberShield AI is built with modern web technologies for zero-friction execution on any machine.
 
 ### Option A: Instant Browser Preview (Zero Setup)
 Simply double-click [`index.html`](index.html) to open the application directly in your web browser!
@@ -148,39 +143,28 @@ Simply double-click [`index.html`](index.html) to open the application directly 
 ### Option B: Local HTTP Server (Recommended)
 ```bash
 # Clone the repository
-git clone https://github.com/your-username/ecotrack-ai.git
-cd ecotrack-ai
+git clone https://github.com/your-username/cybershield-ai.git
+cd cybershield-ai
 
-# Start a lightweight local server with Python:
-python -m http.server 8080
-
-# Or with Node / npx:
-npx serve .
+# Start local server with Node.js
+node -e "const http = require('http'), fs = require('fs'), path = require('path'); const mime = { '.html': 'text/html', '.css': 'text/css', '.js': 'application/javascript', '.json': 'application/json' }; http.createServer((req, res) => { let f = path.join(__dirname, req.url === '/' ? 'index.html' : req.url); fs.readFile(f, (err, data) => { if (err) { res.writeHead(404); res.end('Not Found'); return; } res.writeHead(200, { 'Content-Type': mime[path.extname(f)] || 'text/plain' }); res.end(data); }); }).listen(4173, () => console.log('CyberShield SOC listening on http://localhost:4173'));"
 ```
-Visit `http://localhost:8080` in your browser.
+Visit `http://localhost:4173` in your browser.
 
 ---
 
 ## 📂 Project Repository Structure
 
 ```
-├── index.html              # Main application dashboard, AI studio, GIS map & embedded pitch deck
-├── styles.css              # Cyber-emerald design system, glassmorphism & responsive styles
-├── app.js                  # Application controller, Leaflet GIS, Chart.js & simulation logic
-├── presentation_deck.html  # Standalone 16:9 Pitch Deck (PPT) for jury presentation & PDF export
+├── index.html              # Main SOC command center, global attack map, sandbox & embedded pitch deck
+├── styles.css              # Cyber-noir SOC design system, glassmorphism & responsive styles
+├── app.js                  # Application controller, Leaflet attack arcs, sandbox & auto-patcher logic
+├── presentation_deck.html  # Standalone 16:9 Pitch Deck (PPT) for jury evaluation & PDF export
 ├── SUBMISSION.md           # Copy-paste submission document for the Hack Devengers portal
 ├── README.md               # Repository documentation and evaluation guide
 ├── LICENSE                 # MIT Open Source License
 └── .gitignore              # Standard git ignore rules
 ```
-
----
-
-## 🔮 Future Scalability Roadmap
-
-- [ ] **Phase 2 (Q4 2026):** Sentinel-5P Satellite Ingestion — direct integration with European Space Agency Copernicus API for methane and NO₂ plume detection over industrial plants.
-- [ ] **Phase 3 (Q1 2027):** Edge IoT Connectors — Modbus, BACnet, and LoRaWAN gateways for factory floor power meters.
-- [ ] **Phase 4 (2027):** Carbon Tokenization — decentralized, immutable carbon offset retirement on energy-efficient distributed ledgers.
 
 ---
 

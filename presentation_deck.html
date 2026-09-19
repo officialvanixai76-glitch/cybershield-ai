@@ -3,27 +3,27 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>EcoTrack AI — Hack Devengers 2.0 Pitch Presentation (PPT)</title>
+  <title>CyberShield AI — Hack Devengers 2.0 Pitch Presentation (PPT)</title>
   
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   
   <!-- FontAwesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
   <style>
     :root {
-      --bg: #070c0e;
-      --card-bg: rgba(14, 23, 28, 0.85);
-      --border: rgba(16, 185, 129, 0.25);
-      --emerald: #10b981;
-      --emerald-light: #34d399;
-      --cyan: #06b6d4;
-      --amber: #f59e0b;
+      --bg: #05070a;
+      --card-bg: rgba(11, 18, 28, 0.9);
+      --border: rgba(0, 240, 255, 0.25);
+      --cyan: #00f0ff;
+      --crimson: #ff0055;
+      --emerald: #00ff9d;
+      --amber: #ffaa00;
       --gold: #fbbf24;
-      --font: 'Outfit', sans-serif;
+      --font: 'Space Grotesk', sans-serif;
       --font-mono: 'JetBrains Mono', monospace;
     }
 
@@ -38,18 +38,17 @@
       display: flex;
       flex-direction: column;
       background-image: 
-        radial-gradient(circle at 10% 20%, rgba(16, 185, 129, 0.08) 0%, transparent 40%),
-        radial-gradient(circle at 90% 80%, rgba(6, 182, 212, 0.06) 0%, transparent 45%);
+        radial-gradient(circle at 10% 20%, rgba(0, 240, 255, 0.08) 0%, transparent 40%),
+        radial-gradient(circle at 90% 80%, rgba(255, 0, 85, 0.06) 0%, transparent 45%);
     }
 
-    /* Top Bar */
     .top-bar {
       display: flex;
       justify-content: space-between;
       align-items: center;
       padding: 14px 28px;
       border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-      background: rgba(10, 16, 20, 0.9);
+      background: rgba(8, 14, 22, 0.95);
     }
 
     .brand-group {
@@ -64,8 +63,8 @@
       color: #fff;
     }
 
-    .accent-text {
-      color: var(--emerald-light);
+    .accent-cyan {
+      color: var(--cyan);
     }
 
     .badge-trophy {
@@ -87,8 +86,8 @@
     .slide-indicator {
       font-family: var(--font-mono);
       font-size: 0.82rem;
-      color: var(--emerald-light);
-      background: rgba(16, 185, 129, 0.1);
+      color: var(--cyan);
+      background: rgba(0, 240, 255, 0.1);
       padding: 4px 12px;
       border-radius: 9999px;
     }
@@ -110,11 +109,10 @@
     }
 
     .btn-action:hover {
-      background: rgba(16, 185, 129, 0.2);
-      border-color: var(--emerald);
+      background: rgba(0, 240, 255, 0.2);
+      border-color: var(--cyan);
     }
 
-    /* Presentation Canvas (16:9 Aspect Ratio) */
     .deck-container {
       flex: 1;
       display: flex;
@@ -131,7 +129,7 @@
       background: var(--card-bg);
       border: 1px solid var(--border);
       border-radius: 18px;
-      box-shadow: 0 25px 60px rgba(0, 0, 0, 0.9), 0 0 35px rgba(16, 185, 129, 0.15);
+      box-shadow: 0 25px 60px rgba(0, 0, 0, 0.9), 0 0 35px rgba(0, 240, 255, 0.15);
       position: relative;
       overflow: hidden;
       display: flex;
@@ -158,12 +156,11 @@
       to { opacity: 1; transform: translateY(0); }
     }
 
-    /* Typography inside slides */
     .kicker {
       font-size: 0.78rem;
       font-weight: 700;
       letter-spacing: 0.08em;
-      color: var(--emerald-light);
+      color: var(--cyan);
       text-transform: uppercase;
       margin-bottom: 8px;
       display: block;
@@ -188,11 +185,10 @@
     p.lead-text {
       font-size: 1.15rem;
       color: #cbd5e1;
-      max-width: 820px;
+      max-width: 840px;
       line-height: 1.6;
     }
 
-    /* Grid Layouts */
     .grid-3 {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
@@ -234,16 +230,14 @@
       font-size: 1.3rem;
     }
 
-    .card-icon.red { background: rgba(239, 68, 68, 0.15); color: #f87171; }
-    .card-icon.amber { background: rgba(245, 158, 11, 0.15); color: #fbbf24; }
-    .card-icon.purple { background: rgba(139, 92, 246, 0.15); color: #c084fc; }
-    .card-icon.emerald { background: rgba(16, 185, 129, 0.15); color: var(--emerald-light); }
-    .card-icon.blue { background: rgba(6, 182, 212, 0.15); color: var(--cyan); }
+    .card-icon.crimson { background: rgba(255, 0, 85, 0.15); color: var(--crimson); }
+    .card-icon.cyan { background: rgba(0, 240, 255, 0.15); color: var(--cyan); }
+    .card-icon.emerald { background: rgba(0, 255, 157, 0.15); color: var(--emerald); }
+    .card-icon.purple { background: rgba(168, 85, 247, 0.15); color: #c084fc; }
 
     .card h3 { font-size: 1.15rem; color: #fff; }
     .card p { font-size: 0.92rem; color: #94a3b8; line-height: 1.5; }
 
-    /* Comparison Table */
     table.slide-table {
       width: 100%;
       border-collapse: collapse;
@@ -266,19 +260,18 @@
     }
 
     table.slide-table .highlight {
-      background: rgba(16, 185, 129, 0.12);
-      color: #6ee7b7;
+      background: rgba(0, 240, 255, 0.12);
+      color: #a5f3fc;
       border-left: 1px solid var(--border);
       border-right: 1px solid var(--border);
       font-weight: 600;
     }
 
-    /* Architecture visual */
     .arch-flow {
       display: flex;
       flex-direction: column;
       gap: 12px;
-      background: #081014;
+      background: #04080d;
       border: 1px solid var(--border);
       border-radius: 12px;
       padding: 24px;
@@ -295,7 +288,7 @@
     .arch-tag {
       font-size: 0.8rem;
       font-weight: 700;
-      color: var(--emerald-light);
+      color: var(--cyan);
       width: 180px;
       text-transform: uppercase;
     }
@@ -317,19 +310,18 @@
     }
 
     .arch-pill.glow {
-      background: rgba(16, 185, 129, 0.18);
-      border-color: var(--emerald-light);
-      color: #a7f3d0;
+      background: rgba(0, 240, 255, 0.18);
+      border-color: var(--cyan);
+      color: #a5f3fc;
       font-weight: 600;
     }
 
-    /* Bottom Control Bar */
     .bottom-bar {
       display: flex;
       justify-content: space-between;
       align-items: center;
       padding: 14px 28px;
-      background: rgba(10, 16, 20, 0.95);
+      background: rgba(8, 14, 22, 0.95);
       border-top: 1px solid rgba(255, 255, 255, 0.08);
     }
 
@@ -346,8 +338,9 @@
     }
 
     .btn-nav:hover:not(:disabled) {
-      background: var(--emerald);
-      border-color: var(--emerald);
+      background: var(--cyan);
+      color: #03080e;
+      border-color: var(--cyan);
     }
 
     .btn-nav:disabled {
@@ -370,12 +363,11 @@
     }
 
     .dot.active {
-      background: var(--emerald);
-      box-shadow: 0 0 10px var(--emerald);
+      background: var(--cyan);
+      box-shadow: 0 0 10px var(--cyan);
       transform: scale(1.25);
     }
 
-    /* Print Styles */
     @media print {
       body { height: auto; overflow: visible; background: #fff; color: #000; }
       .top-bar, .bottom-bar { display: none !important; }
@@ -390,12 +382,12 @@
   <!-- Top Bar -->
   <header class="top-bar">
     <div class="brand-group">
-      <div class="brand-title">EcoTrack <span class="accent-text">AI</span></div>
+      <div class="brand-title">CyberShield <span class="accent-cyan">AI</span></div>
       <span class="badge-trophy"><i class="fa-solid fa-trophy"></i> HACK DEVENGERS 2.0 &bull; 1ST PRIZE SUBMISSION</span>
     </div>
     <div class="top-controls">
       <span class="slide-indicator" id="slideIndicator">Slide 1 of 10</span>
-      <a href="index.html" class="btn-action"><i class="fa-solid fa-display"></i> Open Live App</a>
+      <a href="index.html" class="btn-action"><i class="fa-solid fa-shield-halved"></i> Open Live SOC Console</a>
       <button class="btn-action" id="fullscreenToggle"><i class="fa-solid fa-expand"></i> Fullscreen</button>
       <button class="btn-action" onclick="window.print()"><i class="fa-solid fa-file-pdf"></i> Export PDF</button>
     </div>
@@ -407,18 +399,18 @@
       
       <!-- Slide 1: Cover -->
       <section class="slide-page active" data-index="1">
-        <span class="kicker"><i class="fa-solid fa-sparkles"></i> HACK DEVENGERS 2.0 &bull; OPEN INNOVATION</span>
-        <h1 class="hero-title">EcoTrack <span class="accent-text">AI</span></h1>
-        <p class="lead-text">Autonomous Hyperlocal Carbon Accounting &amp; Supply Chain ESG Intelligence Platform</p>
+        <span class="kicker"><i class="fa-solid fa-shield-halved"></i> HACK DEVENGERS 2.0 &bull; OPEN INNOVATION</span>
+        <h1 class="hero-title">CyberShield <span class="accent-cyan">AI</span></h1>
+        <p class="lead-text">Autonomous Multi-Cloud Threat Hunting, Zero-Day Exploit Auto-Patcher &amp; Global Attack Defense Platform</p>
         <div style="margin-top: 24px; display: flex; gap: 12px;">
-          <span class="badge-trophy" style="background: rgba(16,185,129,0.15); border-color: var(--emerald); color: #a7f3d0; font-size: 0.85rem; padding: 6px 14px;">
-            <i class="fa-solid fa-microchip"></i> Multimodal AI OCR &amp; NLP
+          <span class="badge-trophy" style="background: rgba(0,240,255,0.15); border-color: var(--cyan); color: #a5f3fc; font-size: 0.85rem; padding: 6px 14px;">
+            <i class="fa-solid fa-bolt"></i> 840ms Autonomous MTTR
           </span>
-          <span class="badge-trophy" style="background: rgba(6,182,212,0.15); border-color: var(--cyan); color: #67e8f9; font-size: 0.85rem; padding: 6px 14px;">
-            <i class="fa-solid fa-globe"></i> Hyperlocal GIS Risk Map
+          <span class="badge-trophy" style="background: rgba(0,255,157,0.15); border-color: var(--emerald); color: #a7f3d0; font-size: 0.85rem; padding: 6px 14px;">
+            <i class="fa-solid fa-microchip"></i> Kernel eBPF Virtual Patching
           </span>
-          <span class="badge-trophy" style="background: rgba(245,158,11,0.15); border-color: var(--amber); color: #fef08a; font-size: 0.85rem; padding: 6px 14px;">
-            <i class="fa-solid fa-sliders"></i> Real-Time Abatement Engine
+          <span class="badge-trophy" style="background: rgba(255,0,85,0.15); border-color: var(--crimson); color: #fda4af; font-size: 0.85rem; padding: 6px 14px;">
+            <i class="fa-solid fa-flask-vial"></i> Zero-Day Exploit Sandbox
           </span>
         </div>
         <p style="margin-top: 36px; font-size: 0.85rem; color: #64748b;">Targeting 1st Prize (₹50,000) &bull; Built in 24 Hours</p>
@@ -427,22 +419,22 @@
       <!-- Slide 2: Problem -->
       <section class="slide-page" data-index="2">
         <span class="kicker">THE PROBLEM STATEMENT</span>
-        <h2 class="slide-title">The Trillion-Dollar Corporate Climate Dilemma</h2>
+        <h2 class="slide-title">The 72-Hour Zero-Day Vulnerability Window</h2>
         <div class="grid-3">
           <div class="card">
-            <div class="card-icon red"><i class="fa-solid fa-file-excel"></i></div>
-            <h3>Manual Spreadsheet Bottleneck</h3>
-            <p>Enterprises spend 6 to 9 months manually compiling PDFs, utility bills, and fuel receipts in error-prone Excel models.</p>
+            <div class="card-icon crimson"><i class="fa-solid fa-hourglass-end"></i></div>
+            <h3>287-Day Industry MTTR</h3>
+            <p>Enterprises take an average of 287 days to detect and remediate an attack. Human response operates in months, while exploits strike in milliseconds.</p>
           </div>
           <div class="card">
-            <div class="card-icon amber"><i class="fa-solid fa-triangle-exclamation"></i></div>
-            <h3>Scope 3 Supply Chain Blindspot</h3>
-            <p>Over 80% to 90% of emissions sit in upstream suppliers and transoceanic shipping routes with zero real-time visibility.</p>
+            <div class="card-icon cyan"><i class="fa-solid fa-cloud-bolt"></i></div>
+            <h3>Multi-Cloud Blindspots</h3>
+            <p>Fragmented microservices across AWS, GCP, Azure, and K8s create disconnected security silos where lateral movement goes undetected.</p>
           </div>
           <div class="card">
-            <div class="card-icon purple"><i class="fa-solid fa-gavel"></i></div>
-            <h3>Severe Regulatory Penalties</h3>
-            <p>Mandatory EU CSRD, US SEC Climate Rules, and SEBI BRSR impose multi-million dollar fines for inaccurate emissions disclosure.</p>
+            <div class="card-icon purple"><i class="fa-solid fa-robot"></i></div>
+            <h3>AI-Weaponized Cyber Attacks</h3>
+            <p>Adversaries deploy automated LLM vulnerability scanners and polymorphic worms that mutate faster than traditional static signatures can defend.</p>
           </div>
         </div>
       </section>
@@ -450,62 +442,62 @@
       <!-- Slide 3: Solution -->
       <section class="slide-page" data-index="3">
         <span class="kicker">THE INNOVATION</span>
-        <h2 class="slide-title">EcoTrack AI: Autonomous Decarbonization Copilot</h2>
-        <p class="lead-text">An end-to-end intelligent platform that automates emissions ingestion, maps supply chain climate risks, and calculates optimal ROI decarbonization pathways.</p>
+        <h2 class="slide-title">CyberShield AI: Autonomous Immunity for Modern Cloud</h2>
+        <p class="lead-text">An end-to-end intelligent cybersecurity platform that detects zero-days, detonates payloads in air-gapped microVMs, and synthesizes kernel-level virtual patches in <strong>sub-second time (840ms)</strong>.</p>
         <div class="grid-4" style="margin-top: 20px;">
           <div class="card">
-            <div class="card-icon emerald"><i class="fa-solid fa-eye"></i></div>
-            <h3>Multimodal AI</h3>
-            <p>Extracts data from utility bills &amp; logistics manifests in seconds.</p>
+            <div class="card-icon cyan"><i class="fa-solid fa-network-wired"></i></div>
+            <h3>Global Attack GIS</h3>
+            <p>Live geospatial tracking of nation-state botnets &amp; workloads.</p>
           </div>
           <div class="card">
-            <div class="card-icon blue"><i class="fa-solid fa-earth-americas"></i></div>
-            <h3>GIS Risk Map</h3>
-            <p>Visualizes tier-1 suppliers, transport corridors, and emission hotspots.</p>
+            <div class="card-icon crimson"><i class="fa-solid fa-flask-vial"></i></div>
+            <h3>Virtual Sandbox</h3>
+            <p>Air-gapped detonation with 99.8% AI confidence verdicts.</p>
           </div>
           <div class="card">
-            <div class="card-icon amber"><i class="fa-solid fa-sliders"></i></div>
-            <h3>What-If Abatement</h3>
-            <p>Models EV fleet switch &amp; renewable PPAs with instant financial ROI.</p>
+            <div class="card-icon emerald"><i class="fa-solid fa-microchip"></i></div>
+            <h3>eBPF Auto-Patcher</h3>
+            <p>Non-disruptive kernel bytecode filtering with zero downtime.</p>
           </div>
           <div class="card">
             <div class="card-icon purple"><i class="fa-solid fa-file-shield"></i></div>
-            <h3>1-Click CSRD</h3>
-            <p>Generates cryptographic, audit-ready compliance disclosure reports.</p>
+            <h3>CERT-In Compliance</h3>
+            <p>Automated 6-hour incident disclosure reporting for regulators.</p>
           </div>
         </div>
       </section>
 
-      <!-- Slide 4: System Architecture -->
+      <!-- Slide 4: Architecture -->
       <section class="slide-page" data-index="4">
-        <span class="kicker">TECHNICAL EXECUTION</span>
-        <h2 class="slide-title">End-to-End System Architecture</h2>
+        <span class="kicker">TECHNICAL IMPLEMENTATION</span>
+        <h2 class="slide-title">End-to-End Autonomous Defense Architecture</h2>
         <div class="arch-flow">
           <div class="arch-row">
-            <span class="arch-tag"><i class="fa-solid fa-inbox"></i> Ingestion Layer</span>
+            <span class="arch-tag"><i class="fa-solid fa-inbox"></i> Ingress Telemetry</span>
             <div class="arch-items">
-              <div class="arch-pill">Freight Manifests (PDF/OCR)</div>
-              <div class="arch-pill">Grid Utility Bills (kWh)</div>
-              <div class="arch-pill">Fleet Fuel Telemetry</div>
-              <div class="arch-pill">Cloud Server Logs</div>
+              <div class="arch-pill">eBPF Socket Probes</div>
+              <div class="arch-pill">K8s Ingress Controller</div>
+              <div class="arch-pill">VPC Flow Logs</div>
+              <div class="arch-pill">LLM Prompt Proxy</div>
             </div>
           </div>
           <div class="arch-row">
-            <span class="arch-tag"><i class="fa-solid fa-brain"></i> AI Pipeline</span>
+            <span class="arch-tag"><i class="fa-solid fa-brain"></i> AI Sandbox Core</span>
             <div class="arch-items">
-              <div class="arch-pill glow">LayoutLM Multimodal OCR</div>
-              <div class="arch-pill glow">DEFRA / EPA Factor Mapper</div>
-              <div class="arch-pill glow">Scope 1/2/3 Auto Classifier</div>
-              <div class="arch-pill glow">Anomaly Detection</div>
+              <div class="arch-pill glow">Zero-Day Transformer Model</div>
+              <div class="arch-pill glow">Heuristic Disassembler</div>
+              <div class="arch-pill glow">MITRE ATT&amp;CK Mapper</div>
+              <div class="arch-pill glow">Code Patch Synthesizer</div>
             </div>
           </div>
           <div class="arch-row">
-            <span class="arch-tag"><i class="fa-solid fa-chart-line"></i> Intelligence Core</span>
+            <span class="arch-tag"><i class="fa-solid fa-shield-halved"></i> Active Enforcement</span>
             <div class="arch-items">
-              <div class="arch-pill">Executive Telemetry HUD</div>
-              <div class="arch-pill">Leaflet GIS Supplier Map</div>
-              <div class="arch-pill">Abatement Optimizer</div>
-              <div class="arch-pill">CSRD / SEC Exporter</div>
+              <div class="arch-pill">XDP Kernel Packet Drops</div>
+              <div class="arch-pill">WAF Regex Injection</div>
+              <div class="arch-pill">Micro-Isolation</div>
+              <div class="arch-pill">CERT-In Report Engine</div>
             </div>
           </div>
         </div>
@@ -514,40 +506,40 @@
       <!-- Slide 5: Competitive Advantage -->
       <section class="slide-page" data-index="5">
         <span class="kicker">COMPETITIVE DIFFERENTIATION</span>
-        <h2 class="slide-title">EcoTrack AI vs Legacy &amp; Enterprise Alternatives</h2>
+        <h2 class="slide-title">CyberShield AI vs Legacy SIEM &amp; EDR Solutions</h2>
         <table class="slide-table">
           <thead>
             <tr>
-              <th>Feature Dimension</th>
-              <th>Legacy Spreadsheets</th>
-              <th>Enterprise SaaS (Persefoni)</th>
-              <th class="highlight">EcoTrack AI (Our Solution)</th>
+              <th>Capability</th>
+              <th>Legacy SIEM (Splunk)</th>
+              <th>Next-Gen EDR (CrowdStrike)</th>
+              <th class="highlight">CyberShield AI (Our Solution)</th>
             </tr>
           </thead>
           <tbody>
             <tr>
-              <td><strong>Data Ingestion</strong></td>
-              <td>100% Manual input</td>
-              <td>Batch CSV upload</td>
-              <td class="highlight">Instant Multimodal AI OCR &amp; NLP</td>
+              <td><strong>Zero-Day Response</strong></td>
+              <td>Passive alerts (Hours/Days)</td>
+              <td>Host process kill only</td>
+              <td class="highlight">Sub-Second eBPF Kernel Virtual Patching</td>
             </tr>
             <tr>
-              <td><strong>Scope 3 Discovery</strong></td>
-              <td>Rough estimates</td>
-              <td>Manual supplier surveys</td>
-              <td class="highlight">Automated Route &amp; Supplier Telemetry</td>
+              <td><strong>Patch Delivery</strong></td>
+              <td>Wait weeks for vendor patch</td>
+              <td>Manual quarantine</td>
+              <td class="highlight">Instant Virtual Patch Deployment (Zero Downtime)</td>
             </tr>
             <tr>
-              <td><strong>Abatement Simulation</strong></td>
-              <td>None (Static)</td>
-              <td>Expensive add-on consulting</td>
-              <td class="highlight">Interactive Real-Time What-If Engine</td>
+              <td><strong>AI Workload Defense</strong></td>
+              <td>None</td>
+              <td>Traditional OS only</td>
+              <td class="highlight">Native LLM Prompt Injection &amp; Vector DB Shield</td>
             </tr>
             <tr>
-              <td><strong>Deployment Speed</strong></td>
-              <td>Months</td>
-              <td>6 - 12 Weeks</td>
-              <td class="highlight">Instant Browser Run (Zero Friction)</td>
+              <td><strong>Deployment Friction</strong></td>
+              <td>Months of SIEM tuning</td>
+              <td>Heavy kernel agent install</td>
+              <td class="highlight">Zero-Dependency Instant Web &amp; API Architecture</td>
             </tr>
           </tbody>
         </table>
@@ -559,19 +551,19 @@
         <h2 class="slide-title">Core Working Modules Showcase</h2>
         <div class="grid-3">
           <div class="card">
-            <span style="font-family: var(--font-mono); font-size: 1.8rem; font-weight: 800; color: var(--emerald);">01</span>
-            <h3>AI Ingestion Studio</h3>
-            <p>Upload maritime manifests or power invoices. System executes simulated laser scan, assigns DEFRA factors, and commits tons to ledger.</p>
+            <span style="font-family: var(--font-mono); font-size: 1.8rem; font-weight: 800; color: var(--cyan);">01</span>
+            <h3>Global Attack GIS Map</h3>
+            <p>Interactive Leaflet map tracks nation-state botnets and cloud workloads with animated attack trajectories and live packet feeds.</p>
           </div>
           <div class="card">
-            <span style="font-family: var(--font-mono); font-size: 1.8rem; font-weight: 800; color: var(--cyan);">02</span>
-            <h3>GIS Supply Chain Map</h3>
-            <p>Interactive Leaflet map plots 12 global facilities and supplier hubs with carbon intensity color coding and instant popup recommendations.</p>
+            <span style="font-family: var(--font-mono); font-size: 1.8rem; font-weight: 800; color: var(--crimson);">02</span>
+            <h3>Deep Threat Sandbox</h3>
+            <p>Detonate RCE, K8s breakout, and LLM prompt injections. Inspect live disassembly, payload bytes, and 99.8% AI confidence verdicts.</p>
           </div>
           <div class="card">
-            <span style="font-family: var(--font-mono); font-size: 1.8rem; font-weight: 800; color: var(--gold);">03</span>
-            <h3>Dynamic Abatement Engine</h3>
-            <p>Adjust sliders for EV fleet, renewable PPAs, or smart HVAC to see immediate net financial savings in ₹ Crores and tons of CO₂e mitigated.</p>
+            <span style="font-family: var(--font-mono); font-size: 1.8rem; font-weight: 800; color: var(--emerald);">03</span>
+            <h3>eBPF Auto-Patcher</h3>
+            <p>Deploy synthesized eBPF filters across 1,428 pods in 1 click, instantly dropping attacks and updating system defense status in real time.</p>
           </div>
         </div>
       </section>
@@ -579,67 +571,67 @@
       <!-- Slide 7: Quantifiable Impact -->
       <section class="slide-page" data-index="7">
         <span class="kicker">REAL-WORLD IMPACT</span>
-        <h2 class="slide-title">Quantifiable Results for People &amp; Planet</h2>
+        <h2 class="slide-title">Preventing the Trillion-Dollar Cyber Catastrophe</h2>
         <div class="grid-4">
           <div class="card" style="text-align: center;">
-            <div style="font-family: var(--font-mono); font-size: 3rem; font-weight: 800; color: var(--emerald);">85%</div>
-            <p>Reduction in corporate ESG audit time and consulting fees.</p>
+            <div style="font-family: var(--font-mono); font-size: 3rem; font-weight: 800; color: var(--cyan);">840ms</div>
+            <p>Autonomous MTTR, closing the critical 72-hour zero-day exposure gap.</p>
           </div>
           <div class="card" style="text-align: center;">
-            <div style="font-family: var(--font-mono); font-size: 3rem; font-weight: 800; color: var(--cyan);">30%</div>
-            <p>Average carbon reduction achieved via autonomous abatement advice.</p>
+            <div style="font-family: var(--font-mono); font-size: 3rem; font-weight: 800; color: var(--emerald);">$4.45M</div>
+            <p>Average cost of a data breach prevented through autonomous interception.</p>
           </div>
           <div class="card" style="text-align: center;">
             <div style="font-family: var(--font-mono); font-size: 3rem; font-weight: 800; color: var(--gold);">100%</div>
-            <p>Traceable, audit-proof chain from bill invoice to CSRD certificate.</p>
+            <p>Compliance traceability conforming to CERT-In, US CISA, and SEC rules.</p>
           </div>
           <div class="card" style="text-align: center;">
-            <div style="font-family: var(--font-mono); font-size: 3rem; font-weight: 800; color: #c084fc;">₹1.5Cr</div>
-            <p>Average annual OPEX saved through energy and fleet optimization.</p>
+            <div style="font-family: var(--font-mono); font-size: 3rem; font-weight: 800; color: var(--crimson);">0%</div>
+            <p>Downtime incurred—virtual patches apply without rebooting production pods.</p>
           </div>
         </div>
       </section>
 
       <!-- Slide 8: Market & Monetization -->
       <section class="slide-page" data-index="8">
-        <span class="kicker">MARKET OPPORTUNITY &amp; BUSINESS MODEL</span>
-        <h2 class="slide-title">A $38.5 Billion Global Market by 2030</h2>
+        <span class="kicker">MARKET POTENTIAL &amp; SCALABILITY</span>
+        <h2 class="slide-title">A $266 Billion Global Cyber Defense Market</h2>
         <div class="grid-2">
           <div class="card">
-            <h3 style="color: var(--emerald);"><i class="fa-solid fa-chart-pie"></i> Explosive Regulatory Tailwinds</h3>
-            <p>50,000+ companies across Europe are now legally required to disclose Scope 1-3 under CSRD. The US SEC and India SEBI BRSR make ESG reporting non-negotiable.</p>
-            <div style="margin-top: 10px; background: rgba(6,182,212,0.1); border-left: 3px solid var(--cyan); padding: 8px 12px; border-radius: 4px; font-size: 0.85rem;">
-              <strong>Target Verticals:</strong> Logistics &amp; freight liners, semiconductor fabs, industrial manufacturing, and cloud data centers.
+            <h3 style="color: var(--cyan);"><i class="fa-solid fa-chart-line"></i> Unprecedented Regulatory Mandates</h3>
+            <p>Mandatory 6-hour incident disclosures by CERT-In (India), 4-day SEC Form 8-K rules (US), and the EU NIS2 Directive make autonomous detection and reporting mandatory for every enterprise.</p>
+            <div style="margin-top: 10px; background: rgba(0,240,255,0.1); border-left: 3px solid var(--cyan); padding: 8px 12px; border-radius: 4px; font-size: 0.85rem;">
+              <strong>Target Verticals:</strong> FinTech/Banking, Healthcare, Cloud SaaS, E-Commerce, and Critical Infrastructure.
             </div>
           </div>
           <div class="card">
-            <h3 style="color: var(--gold);"><i class="fa-solid fa-coins"></i> High-Margin SaaS Model</h3>
-            <p><strong>Tier 1 — Growth:</strong> ₹15,000/mo for Scope 1-2 automation.<br>
-            <strong>Tier 2 — Enterprise:</strong> ₹95,000/mo for full Scope 3 GIS supply chain mapping &amp; What-If simulator.<br>
-            <strong>Tier 3 — Institutional:</strong> Custom ERP integrations (SAP/Oracle) &amp; certified auditor access.</p>
+            <h3 style="color: var(--gold);"><i class="fa-solid fa-coins"></i> High-Margin SaaS Business Model</h3>
+            <p><strong>Tier 1 — Cloud Guard (₹25,000/mo):</strong> Up to 50 microservices, WAF rule generation.<br>
+            <strong>Tier 2 — Enterprise SOC (₹1,25,000/mo):</strong> Full eBPF kernel auto-patcher, global attack GIS.<br>
+            <strong>Tier 3 — Mission Critical (Custom):</strong> Air-gapped on-premise deployments &amp; custom SLAs.</p>
           </div>
         </div>
       </section>
 
       <!-- Slide 9: Scalability Roadmap -->
       <section class="slide-page" data-index="9">
-        <span class="kicker">SCALABILITY &amp; FUTURE ROADMAP</span>
-        <h2 class="slide-title">Beyond the Hackathon: Satellite &amp; IoT Horizon</h2>
+        <span class="kicker">SCALABILITY &amp; ROADMAP</span>
+        <h2 class="slide-title">Future Expansion: Autonomous Defense Mesh</h2>
         <div class="grid-3">
+          <div class="card" style="border-color: var(--cyan);">
+            <span style="font-size: 0.72rem; font-weight: 700; color: var(--cyan); text-transform: uppercase;">Current Milestone</span>
+            <h3>Autonomous Core v4.8</h3>
+            <p>Global threat GIS map, sandbox detonation, eBPF auto-patcher, MITRE matrix, CERT-In compliance exporter.</p>
+          </div>
           <div class="card" style="border-color: var(--emerald);">
-            <span style="font-size: 0.72rem; font-weight: 700; color: var(--emerald); text-transform: uppercase;">Current Milestone</span>
-            <h3>Autonomous Core v2.4</h3>
-            <p>Multimodal OCR/NLP engine, Scope 1-3 ledger, Leaflet GIS supplier map, What-If simulator, and CSRD/SEC report exporter.</p>
+            <span style="font-size: 0.72rem; font-weight: 700; color: var(--emerald); text-transform: uppercase;">Phase 2 (Q4 2026)</span>
+            <h3>Federated Threat Mesh</h3>
+            <p>Privacy-preserving federated intelligence sharing across enterprise nodes without exposing sensitive logs.</p>
           </div>
-          <div class="card">
-            <span style="font-size: 0.72rem; font-weight: 700; color: var(--cyan); text-transform: uppercase;">Phase 2 (Q4 2026)</span>
-            <h3>Satellite Plume Detection</h3>
-            <p>Integration with ESA Sentinel-5P remote sensing data to detect methane and NO₂ plumes over monitored factories.</p>
-          </div>
-          <div class="card">
+          <div class="card" style="border-color: var(--gold);">
             <span style="font-size: 0.72rem; font-weight: 700; color: var(--gold); text-transform: uppercase;">Phase 3 (2027)</span>
-            <h3>Tokenized Carbon Offsets</h3>
-            <p>Integration with decentralized green registries for instant, unforgeable retirement of verified carbon credits.</p>
+            <h3>Active Swarm Decoys</h3>
+            <p>Dynamic decoy deception networks that actively exhaust adversary C2 resources in real time.</p>
           </div>
         </div>
       </section>
@@ -647,12 +639,12 @@
       <!-- Slide 10: Conclusion -->
       <section class="slide-page" data-index="10">
         <div style="text-align: center; display: flex; flex-direction: column; align-items: center; gap: 18px;">
-          <span class="badge-trophy"><i class="fa-solid fa-award"></i> WHY ECOTRACK AI WINS 1ST PRIZE</span>
-          <h2 style="font-size: 3rem; font-weight: 800; letter-spacing: -0.03em;">Decarbonization Powered by Autonomous Intelligence</h2>
-          <p class="lead-text" style="text-align: center;">We don't just calculate carbon—we give enterprises the autonomous tools to eliminate it while maximizing profitability.</p>
+          <span class="badge-trophy"><i class="fa-solid fa-award"></i> WHY CYBERSHIELD AI WINS 1ST PRIZE</span>
+          <h2 style="font-size: 3rem; font-weight: 800; letter-spacing: -0.03em;">From Vulnerability to Immunity in 840ms</h2>
+          <p class="lead-text" style="text-align: center;">We don't just alert security teams about attacks—we autonomously neutralize them at the kernel level before damage can occur.</p>
           <div style="display: flex; gap: 16px; margin-top: 10px;">
-            <a href="index.html" class="btn-action" style="padding: 12px 24px; font-size: 1rem; background: var(--emerald); border-color: var(--emerald);">
-              <i class="fa-solid fa-rocket"></i> Launch Live Application
+            <a href="index.html" class="btn-action" style="padding: 12px 24px; font-size: 1rem; background: var(--cyan); color: #03080e; border-color: var(--cyan);">
+              <i class="fa-solid fa-rocket"></i> Launch Live Application Experience
             </a>
           </div>
           <p style="font-size: 0.85rem; color: #64748b; margin-top: 24px;">Thank you, Hack Devengers 2.0 Jury! &bull; Open Innovation Track</p>
@@ -679,7 +671,6 @@
     const dotsContainer = document.getElementById('slideDots');
     const fullscreenToggle = document.getElementById('fullscreenToggle');
 
-    // Create dots
     for (let i = 1; i <= total; i++) {
       const dot = document.createElement('div');
       dot.className = `dot ${i === 1 ? 'active' : ''}`;
